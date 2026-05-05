@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Creepster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <style>
+     :root {
+       --creepster-red: #ff3333;
+       --creepster-red-dark: #cc0000;
+       --creepster-red-light: #ff6666;
+       --bg-primary: #ffffff;
+       --bg-secondary: #f7f9fa;
+       --bg-tertiary: #eff3f4;
+       --text-primary: #0f1419;
+       --text-secondary: #536471;
+       --border-color: #dcddde;
+       --hover-bg: rgba(255, 51, 51, 0.08);
+     }
+     
+     * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+     html { height:100%; }
+     body { 
+       background:var(--bg-primary);
+       color:var(--text-primary);
+       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       min-height:100%;
+     }
+     ::-webkit-scrollbar { width:6px; }
+     ::-webkit-scrollbar-track { background:var(--bg-secondary); }
+     ::-webkit-scrollbar-thumb { background:var(--border-color); border-radius:3px; }
+     ::selection { background:var(--creepster-red); color:white; }
+     input:focus, textarea:focus { outline: 2px solid var(--creepster-red) !important; outline-offset: 0 !important; border-radius: 4px; }
+     
+     /* Desktop */
+     @media (min-width: 769px) {
+       .sidebar-desktop { display: flex !important; }
+       .sidebar-mobile { display: none !important; }
+       .main-content-area { max-width: 600px; margin: 0 auto; }
+       .sidebar-right-desktop { display: block !important; }
+     }
+     
+     /* Tablet */
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .sidebar-right-desktop { display: none !important; }
+     }
+     
+     /* Mobile */
+     @media (max-width: 768px) {
+       .sidebar-desktop { display: none !important; }
+       .sidebar-mobile { display: flex !important; }
+       .main-content-area { 
+         max-width: 100% !important;
+         border-right: none !important;
+         padding-bottom: 60px !important;
+       }
+       .sidebar-right-desktop { display: none !important; }
+     }
+   </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/App.jsx"></script>
+</body>
+</html>

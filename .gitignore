@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.local
+.firebase/
+.firebase-debug.log
+server/service-account-key.json
+.vercel
